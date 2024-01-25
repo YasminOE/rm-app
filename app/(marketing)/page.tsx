@@ -25,8 +25,8 @@ const MarketingPage = () => {
       {/* <div className="fixed top-0 z-[10000]"> */}
       <PixelBackground />
       {/* </div> */}
-      <div className="flex items-center justify-center max-w-md md:max-w-3xl lg:max-w-4xl xl:max-w-3xl mx-auto hero-container">
-        <div className="flex items-center justify-center flex-col mt-[200px] hero-text">
+      <div className="flex items-center justify-center max-w-md sm:max-w-sm md:max-w-3xl lg:max-w-4xl xl:max-w-3xl mx-auto hero-container">
+        <div className="flex items-center justify-center flex-col hero-text lg:mt-[200px] max-xl:mt-[200px]">
           <div
             className={cn(
               "flex items-center justify-center flex-col",

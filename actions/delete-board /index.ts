@@ -41,6 +41,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
 
     board = await response.json();
     if (board.ok) {
+      revalidatePath(`/organization/${orgId}`);
       redirect(`/organization/${orgId}`);
     }
     console.log("delete board");
@@ -50,7 +51,6 @@ const handler = async (data: InputType): Promise<ReturnType> => {
       error: "Failed to delete.",
     };
   }
-  // revalidatePath(`/organization/${orgId}`);
   // redirect(`/organization/${orgId}`);
   return { data: board };
 };

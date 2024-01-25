@@ -19,6 +19,17 @@ interface BoardOptionsProps {
 
 //TODO: fix this error
 export const BoardOptions = ({ id }: BoardOptionsProps) => {
+  const { execute, isLoading } = useAction(deleteBoard, {
+    onError: (error) => {
+      toast.error(error);
+    },
+  });
+
+  const onDelete = () => {
+    execute(id);
+    // execute({ id });
+  };
+
   return (
     <Popover>
       <PopoverTrigger asChild>
@@ -44,8 +55,8 @@ export const BoardOptions = ({ id }: BoardOptionsProps) => {
         </PopoverClose>
         <Button
           variant="ghost"
-          // onClick={onDelete}
-          // disabled={isLoading}
+          onClick={onDelete}
+          disabled={isLoading}
           className="rounded-none w-full h-auto p-2 px-5 justify-start font-normal text-sm"
         >
           Delete board
