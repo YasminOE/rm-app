@@ -2,7 +2,7 @@
 
 import { revalidatePath } from "next/cache";
 
-export async function deleteBoard(id: string) {
+export async function deleteBoard(id: string): Promise<any> {
   const response = await fetch(
     `https://65ae7ed21dfbae409a74f76c.mockapi.io/api/v1/board/${id}`,
     {
