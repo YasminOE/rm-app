@@ -9,7 +9,7 @@ generator client {
 
 datasource db {
   provider = "sqlite"
-  url      = "file:./data/dev.db"
+  url      = "file:https://reqtify.vercel.app/data/dev.db"
 }
 
 
