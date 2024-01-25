@@ -1,0 +1,214 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+
+    --radius: 0.5rem;
+
+    --animation-primary: all 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+    --animation-fast: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+    --animation-smooth: all 0.7s cubic-bezier(0.7, 0, 0.3, 1);
+    --animation-slow: all 0.9s cubic-bezier(0.7, 0, 0.3, 1);
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.animation-primary {
+  transition: var(--animation-primary);
+}
+.animation-fast {
+  transition: var(--animation-fast);
+}
+.animation-slow {
+  transition: var(--animation-slow);
+}
+.animation-smooth {
+  transition: var(--animation-smooth);
+}
+
+.fully-rounded {
+  border-radius: 9999px;
+}
+
+/* ------------------------ Loader ------------------------ */
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  /* background-image: url("/assets/images/Bean.png"); */
+  /* background-image: url("/assets/imgs/hero-mask2.png"); */
+  /* background-repeat: no-repeat; */
+  /* background-size: contain; */
+  /* background-position: center; */
+}
+
+.counter {
+  position: fixed;
+  left: 50px;
+  bottom: 50px;
+  display: flex;
+  height: 100px;
+  font-size: 100px;
+  line-height: 102px;
+  clip-path: polygon(0 0, 100% 0, 100% 100px, 0 100px);
+  font-weight: 400;
+  color: #edff8c;
+}
+
+.counter-1,
+.counter-2,
+.counter-3 {
+  position: relative;
+  top: -10px;
+}
+
+.num1offset1 {
+  position: relative;
+  right: -25px;
+}
+
+.num1offset2 {
+  position: relative;
+  right: -10px;
+}
+
+.loader-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.loader-logo svg {
+  width: clamp(4rem, 6cqi + 2rem, 10rem);
+  height: 10cqi;
+}
+.loader-logo svg path {
+  fill: var(--main-color-dark);
+}
+.slide-in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 11;
+  pointer-events: none;
+}
+
+.slide-out {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #edff8c;
+  transform-origin: bottom;
+  z-index: 11;
+}
+
+@media (max-width: 400px) {
+  .counter {
+    display: flex;
+    font-size: 70px;
+  }
+}
+
+/* .pixel-background-wrapper {
+  display: absolute;
+  top: 0;
+  height: 100vh;
+  background: white;
+  z-index: 10000;
+} */
+
+.pixel-background {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.pixel-column {
+  width: 5vw;
+  height: 100vh;
+}
+
+.pixel-block {
+  height: 5vw;
+  width: 100%;
+  background-color: #edff8c;
+}
