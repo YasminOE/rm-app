@@ -3,13 +3,14 @@
 
 
 
-generator client {
-  provider = "prisma-client-js"
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
 }
 
-datasource db {
-  provider = "sqlite"
-  url      = "file:https://reqtify.vercel.app/data/dev.db"
+generator client {
+  provider = "prisma-client-js"
 }
 
 
