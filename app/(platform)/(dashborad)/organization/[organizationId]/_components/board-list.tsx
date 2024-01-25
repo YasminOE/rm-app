@@ -54,7 +54,7 @@ export const BoardList = async () => {
             </p>
           </Link>
         ))}
-        <FormPopover sideOffset={10} side="right">
+        <FormPopover align="center" side="bottom" sideOffset={18}>
           <div
             role="button"
             className="aspect-video relative h-full w-full border-[1.4px] border-black rounded-lg flex flex-col gap-y-1 items-center justify-center hover:bg-[#B8AEE8]/75 transition animation-smooth "
