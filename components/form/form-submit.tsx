@@ -6,7 +6,6 @@ import { cn } from "@/lib/utils";
 
 import { Button } from "@/components/ui/button";
 
-//TODO: add the new variants here
 interface FormSubmitProps {
   children: React.ReactNode;
   disabled?: boolean;

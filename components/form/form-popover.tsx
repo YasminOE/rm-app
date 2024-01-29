@@ -20,7 +20,6 @@ import { FormInput } from "./form-input";
 import { FormSubmit } from "./form-submit";
 import { FormPicker } from "./form-picker";
 
-//TODO: change the popover background and the color of create button
 interface FormPopoverProps {
   children: React.ReactNode;
   side?: "left" | "right" | "top" | "bottom";

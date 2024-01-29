@@ -25,7 +25,6 @@ function reorder<T>(list: T[], startIndex: number, endIndex: number) {
   return result;
 }
 
-//TODO: style
 export const ListContainer = ({ data, boardId }: ListContainerProps) => {
   const [orderedData, setOrderedData] = useState(data);
 

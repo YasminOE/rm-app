@@ -9,7 +9,6 @@ import { createSafeActions } from "@/lib/create-safe-action";
 import { DeleteBoard } from "./schema";
 import { InputType, ReturnType } from "./types";
 
-//TODO fix error when board deleted
 const handler = async (data: InputType): Promise<ReturnType> => {
   const { userId, orgId } = auth();
 
@@ -23,11 +22,6 @@ const handler = async (data: InputType): Promise<ReturnType> => {
 
   console.log({ boardId, id, userId });
 
-  //   if(userId !== boardId) {
-  //     return {
-  //       error: "Forbidden",
-  //     }
-  // }
   const currOrgId = orgId;
   let board;
 
@@ -51,7 +45,6 @@ const handler = async (data: InputType): Promise<ReturnType> => {
       error: "Failed to delete.",
     };
   }
-  // redirect(`/organization/${orgId}`);
   return { data: board };
 };
 

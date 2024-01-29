@@ -23,8 +23,6 @@ interface FormTextareaProps {
   defaultValue?: string;
 }
 
-//TODO: style
-
 export const FormTextarea = forwardRef<HTMLTextAreaElement, FormTextareaProps>(
   (
     {

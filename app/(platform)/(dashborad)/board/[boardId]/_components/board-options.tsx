@@ -17,7 +17,6 @@ interface BoardOptionsProps {
   id: string;
 }
 
-//TODO: fix this error
 export const BoardOptions = ({ id }: BoardOptionsProps) => {
   const { execute, isLoading } = useAction(deleteBoard, {
     onError: (error) => {
@@ -27,7 +26,6 @@ export const BoardOptions = ({ id }: BoardOptionsProps) => {
 
   const onDelete = () => {
     execute(id);
-    // execute({ id });
   };
 
   return (

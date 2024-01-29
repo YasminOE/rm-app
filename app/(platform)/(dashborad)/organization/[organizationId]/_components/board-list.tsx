@@ -7,7 +7,6 @@ import { Board } from "@/actions/create-board/types";
 import { Skeleton } from "@/components/ui/skeleton";
 import { FormPopover } from "@/components/form/form-popover";
 
-//TODO: replace every bg-sky-700 or ky color with brand color
 async function getData(orgId: string) {
   const res = await fetch(
     "https://65ae7ed21dfbae409a74f76c.mockapi.io/api/v1/board"
@@ -16,9 +15,6 @@ async function getData(orgId: string) {
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
-
-  // const data: Board[] = await res.json();
-  // return data;
 
   const allBoards: Board[] = await res.json();
   const filteredBoards = allBoards.filter((board) => board.orgId === orgId);

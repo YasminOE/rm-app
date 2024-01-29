@@ -23,7 +23,6 @@ interface ListOptionsProps {
   onAddCard: () => void;
 }
 
-//TODO: style
 export const ListOptions = ({ data, onAddCard }: ListOptionsProps) => {
   const closeRef = useRef<ElementRef<"button">>(null);
 

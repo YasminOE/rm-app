@@ -15,7 +15,6 @@ interface ListItemProps {
   index: number;
 }
 
-//TODO: style
 export const ListItem = ({ data, index }: ListItemProps) => {
   const textareaRef = useRef<ElementRef<"textarea">>(null);
 

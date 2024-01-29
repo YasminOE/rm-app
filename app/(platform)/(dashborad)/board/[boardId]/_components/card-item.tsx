@@ -10,7 +10,6 @@ interface CardItemProps {
   index: number;
 }
 
-//TODO: style
 export const CardItem = ({ data, index }: CardItemProps) => {
   const cardModal = useCardModal();
 

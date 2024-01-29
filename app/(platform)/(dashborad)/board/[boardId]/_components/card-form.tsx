@@ -20,7 +20,6 @@ interface CardFormProps {
   isEditing: boolean;
 }
 
-//TODO: style
 export const CardForm = forwardRef<HTMLTextAreaElement, CardFormProps>(
   ({ listId, enableEditing, disableEditing, isEditing }, ref) => {
     const params = useParams();

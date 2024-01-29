@@ -9,7 +9,6 @@ import { DeleteList } from "./schema";
 import { InputType, ReturnType } from "./types";
 import { db } from "@/lib/db";
 
-// TODO delete the mockapi fetch if not needed
 const handler = async (data: InputType): Promise<ReturnType> => {
   const { userId, orgId } = auth();
 
@@ -32,14 +31,6 @@ const handler = async (data: InputType): Promise<ReturnType> => {
         boardId,
       },
     });
-    // const response = await fetch(
-    //   `https://65ae7ed21dfbae409a74f76c.mockapi.io/api/v1/board/${id}`,
-    //   {
-    //     method: "DELETE",
-    //   }
-    // );
-
-    // board = filteredBoard;
   } catch (error) {
     return {
       error: "Failed to delete.",

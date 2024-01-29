@@ -8,18 +8,11 @@ const headingFont = localFont({
   src: "../public/fonts/LufgaBold.ttf",
 });
 
-// TODO: change the logo to the actual logo file.
 export const Logo = () => {
   return (
     <Link href="/">
       <div className="hover:opacity-75 transition items-center gap-x-2 hidden md:flex">
-        <Image
-          // src="/next.svg"
-          src="/logo.svg"
-          alt="Logo"
-          height={40}
-          width={40}
-        />
+        <Image src="/logo.svg" alt="Logo" height={40} width={40} />
         <p
           className={cn("text-lg text-neutral-700 pb-1", headingFont.className)}
         >
