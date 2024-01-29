@@ -17,11 +17,6 @@ export async function GET(
     const card = await db.card.findUnique({
       where: {
         id: params.cardId,
-        // list: {
-        //   board: {
-        //     orgId,
-        //   },
-        // },
       },
       include: {
         list: {
