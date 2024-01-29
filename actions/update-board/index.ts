@@ -36,13 +36,8 @@ const handler = async (data: InputType): Promise<ReturnType> => {
       }
     );
 
-    // const boards: Board[] = await response.json();
-    // const filteredBoard = boards.find(
-    //   (board) => board.orgId === orgId && board.id === id
-    // );
     board = await response.json();
     console.log("BOARD UPDATE:", { board });
-    // board = filteredBoard;
   } catch (error) {
     return {
       error: "Failed to update.",

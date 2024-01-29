@@ -9,6 +9,9 @@ import { UpdateList } from "./schema";
 import { InputType, ReturnType } from "./types";
 import { db } from "@/lib/db";
 
+import { ACTION, ENTITY_TYPE } from "@prisma/client";
+import { createAuditLog } from "@/lib/create-auditlog";
+
 const handler = async (data: InputType): Promise<ReturnType> => {
   const { userId, orgId } = auth();
 
@@ -31,6 +34,13 @@ const handler = async (data: InputType): Promise<ReturnType> => {
       data: {
         title,
       },
+    });
+
+    await createAuditLog({
+      entityTitle: list.title,
+      entityId: list.id,
+      entityType: ENTITY_TYPE.LIST,
+      action: ACTION.UPDATE,
     });
   } catch (error) {
     return {

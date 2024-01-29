@@ -74,7 +74,7 @@ export const Actions = ({ data }: ActionsProps) => {
         className="w-full justify-start"
         size="inline"
       >
-        <Copy className="h-4 w-4 mr-2" />
+        <Copy className="h-4 w-4 mr-2 ml-2" />
         Copy
       </Button>
       <Button
@@ -84,7 +84,7 @@ export const Actions = ({ data }: ActionsProps) => {
         className="w-full justify-start"
         size="inline"
       >
-        <Trash className="h-4 w-4 mr-2" />
+        <Trash className="h-4 w-4 mr-2 ml-2" />
         Delete
       </Button>
     </div>
@@ -94,9 +94,9 @@ export const Actions = ({ data }: ActionsProps) => {
 Actions.Skeleton = function ActionsSkeleton() {
   return (
     <div className="space-y-2 mt-2">
-      <Skeleton className="w-20 h-4 bg-neutral-200 " />
-      <Skeleton className="w-full h-8 bg-neutral-200" />
-      <Skeleton className="w-full h-8 bg-neutral-200" />
+      <Skeleton className="w-20 h-4" />
+      <Skeleton className="w-full h-8" />
+      <Skeleton className="w-full h-8" />
     </div>
   );
 };
