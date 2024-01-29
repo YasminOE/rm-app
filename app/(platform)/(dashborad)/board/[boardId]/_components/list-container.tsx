@@ -65,7 +65,7 @@ export const ListContainer = ({ data, boardId }: ListContainerProps) => {
       return;
     }
 
-    // Moveing a list
+    // Moving a list
     if (type === "list") {
       const items = reorder(orderedData, source.index, destination.index).map(
         (item, index) => ({ ...item, order: index })
